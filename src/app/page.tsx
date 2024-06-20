@@ -1,8 +1,52 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "./hero";
+import { useState, useEffect } from 'react';
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    User,
+    signOut,
+    GoogleAuthProvider, signInWithPopup
+} from 'firebase/auth';
+import { auth } from './firebaseconfig';
+import Login from "@/components/signmodal";
 
 export default function Welcome() {
+  const [user, setUser] = useState<User | null>(null);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser);
+        });
+        return () => unsubscribe();
+    }, []);
+    const googleLogin = async () => {
+      const provider = new GoogleAuthProvider();
+      try {
+          const result = await signInWithPopup(auth, provider);
+          // Ensure credential is not null before trying to access properties
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          if (credential) {
+              // This gives you a Google Access Token. You can use it to access the Google API.
+              const token = credential.accessToken;
+              // The signed-in user info.
+              const user = result.user;
+              console.log("Google sign-in successful: ", user, "Access Token:", token);
+          } else {
+              console.log("No credentials returned from Google sign-in");
+          }
+      } catch (error) {
+          if (error instanceof Error) {
+              console.error("Error during Google sign-in:", error.message);
+          } else {
+              console.error("An unknown error occurred during Google sign-in.");
+          }
+      }
+  };
+  
   return (
     <main className="flex flex-col md:flex-row h-screen">
       <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"></link>
@@ -19,24 +63,14 @@ export default function Welcome() {
     height: "100%",
     zIndex: -1,
   }}></div>
-  <div className="flex flex-1 p-12">
+  <div className="p-16 h-74">
     <Hero />
   </div>
-  <div className="flex flex-col items-center space-y-4 mb-16">
+  <div className="flex flex-col items-center justify-center ">
   <div className="flex items-center justify-between space-x-4 bg-white p-4 w-96 ">
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="p-2 flex-grow text-black"
-      />
-      <button className="bg-black text-white p-2">
-        ➔
-      </button>
-      <div className="text-black">G</div>
-    </div>
-    <div className="flex items-center justify-between space-x-4 bg-white p-4 w-96 ">
-      <span className="flex-grow text-black">Explore without sign in</span>
-      <Link href="/home"><button className="bg-black text-white p-2">
+      <Login />
+      <Link href="/home"><button className="text-black text-xl">Log in with Google</button></Link>
+      <Link href="/home"><button onClick={googleLogin} className="bg-black text-white p-2">
         ➔
       </button>
       </Link>
