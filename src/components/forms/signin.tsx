@@ -11,8 +11,8 @@ import {
 import { auth } from '../../app/firebaseconfig';
 
 import React from "react";
-import { Input, Button } from "@nextui-org/react";
-import { EyeFilledIcon, EyeSlashFilledIcon } from "../icons";
+import {Button } from "@nextui-org/react";
+import Link from 'next/link';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -82,7 +82,7 @@ export default function SignIn() {
             <div className="mb-6 relative">
                  <input name="password" type="password" onChange={e => setPassword(e.target.value)} className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600" placeholder="Enter your password"  />
             </div>
-            <Button onClick={login} className="w-full text-white text-2xl bg-black p-2 bg-opacity-50">Login</Button>
+            <Link href="/home"><Button onClick={login} className="w-full text-white text-2xl bg-black p-2 bg-opacity-50">Login</Button></Link>
         </form>
     );
 }
