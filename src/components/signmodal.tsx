@@ -34,9 +34,10 @@ function Modal() {
         <div className="modal-backdrop fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 backdrop-blur-sm flex items-center justify-center z-50" onClick={handleBackdropClick}>
           <div className="modal-content relative p-8 bg-white bg-opacity-60 max-w-sm w-full shadow-xl">
           <div className="flex flex-wrap gap-4">
-      {variants.map((variant) => (
-       <TabForm />
-      ))}
+          {variants.map((variant, index) => (
+  <TabForm key={index} />
+))}
+
     </div>
           </div>
         </div>
