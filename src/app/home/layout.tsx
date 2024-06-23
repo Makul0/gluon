@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import Link from "next/link";
 import Profile from "@/components/home/profile";
-=======
-
-
->>>>>>> refs/remotes/origin/main
 export const metadata: Metadata = {
     title: "Home",
     description: "Gluon home page",
@@ -36,7 +31,6 @@ export const metadata: Metadata = {
                 height: "100%",
                 zIndex: -1,
             }}></div>
-<<<<<<< HEAD
              <header className="flex justify-between items-center p-4">
           <div className="flex ml-4 space-x-6">
             <div className="text-xl text-black bg-white p-2 font-medium hover:underline ">
@@ -54,14 +48,11 @@ export const metadata: Metadata = {
              </div></Link>
              </div>
         </header>
-=======
->>>>>>> refs/remotes/origin/main
            {children}
         </div>
 
         <div className="w-full md:w-1/2 h-full bg-black items-start">
         <img src="https://raw.githubusercontent.com/Makul0/Assets-store-almera/main/astro3.jpg" alt="" className="w-full"/>
-<<<<<<< HEAD
         <footer className="w-full flex fixed bottom-1 p-4 space-x-5">
 			<Link href="">
       <button className="text-white hover:underline ">
@@ -75,10 +66,6 @@ export const metadata: Metadata = {
       <button className="text-white hover:underline fixed right-4 ">
         Contact
       </button></Link>
-=======
-        <footer className="w-full flex fixed bottom-1 p-4 ">
-			hi
->>>>>>> refs/remotes/origin/main
 		</footer>
         </div>
       </main>
