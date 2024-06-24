@@ -13,9 +13,11 @@
     "@nextui-org/react": "^2.4.2",
     "firebase": "^10.12.2",
     "framer-motion": "^11.2.11",
+    "katex": "^0.16.10",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-draft-wysiwyg": "^1.15.0",
     "react-quill": "^2.0.0",
     "typed.js": "^2.1.0"
   },

@@ -38,11 +38,11 @@ export  function Write() {
 
     {isModalOpen && (
         <div className="modal-backdrop fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 backdrop-blur-sm flex items-center justify-center z-50" onClick={handleBackdropClick}>
-            <div className="modal-content relative p-8 bg-white bg-opacity-60 w-full max-w-4xl mx-auto shadow-xl">
+            <div className="modal-content relative p-8 bg-white bg-opacity-80 w-full  mx-auto shadow-xl h-full ">
                 <div className="flex flex-wrap gap-4">
                     <div className="w-full text-2xl text-black p-4">
-                        <h1>write with AI</h1>
-                        <Writer value={editorContent} onChange={handleEditorChange} />
+                       
+                        <Writer  />
                     </div>
                 </div>
                 <button onClick={() => setModalOpen(false)} className="absolute top-3 right-3 text-xl font-bold text-black">&times;</button>
