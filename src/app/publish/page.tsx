@@ -1,22 +1,9 @@
-import Image from "next/image";
+import Write from "@/components/publish/write";
 import Link from "next/link";
 
 export default function Register() {
   return (
-    <main style={{ fontFamily: "EB Garamond",backgroundImage: 'url("https://image.lexica.art/full_webp/2963c24d-80f7-4bcf-a7f7-7add1dfae1ef")',
-    backgroundSize: "cover",
-    backgroundPosition: "center", }} className="flex flex-col md:flex-row h-screen text-black">
-      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"></link>
-      <div className="relative flex flex-col md:flex-row w-full h-full">
-        <Image
-          className="relative w-full md:w-1/2 h-1/2 md:h-full object-cover"
-          src="/astro6.jpg"
-          alt="Descriptive Alt Text"
-          width={500}
-          height={500}
-        />
-        
-        <div className="flex flex-grow items-center justify-center space-x-8 p-8 w-full">
+    <div className="flex flex-grow items-center justify-center space-x-8 p-8 w-full">
           <div className="bg-black text-white p-4 flex flex-col justify-between w-full ">
           <span className="flex select-none text-2xl">title *</span>
           <input
@@ -64,10 +51,8 @@ export default function Register() {
                 </button>
               </Link>
             </div>
+            <Write />
           </div>
         </div>
-
-      </div>
-    </main>
   );
 }
