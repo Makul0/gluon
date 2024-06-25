@@ -1,7 +1,13 @@
-import Write from "@/components/publish/write";
+"use client"
+import React, {useEffect} from "react";
 import Link from "next/link";
 
+
+
 export default function Register() {
+  useEffect(() => {
+
+  },);
   return (
     <div className="flex flex-grow items-center justify-center space-x-8 p-8 w-full">
           <div className="bg-black text-white p-4 flex flex-col justify-between w-full ">
@@ -51,7 +57,6 @@ export default function Register() {
                 </button>
               </Link>
             </div>
-            <Write />
           </div>
         </div>
   );
