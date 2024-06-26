@@ -1,7 +1,7 @@
 "use client"
 import React, {useEffect} from "react";
 import Link from "next/link";
-
+import EditModal from "@/components/editor/editmodal";
 
 
 export default function Register() {
@@ -56,6 +56,13 @@ export default function Register() {
                   Publish
                 </button>
               </Link>
+            </div>
+            <div className="flex justify-end p-2">
+              
+                <button className="bg-white text-black px-4 py-2">
+                  <EditModal />
+                </button>
+              
             </div>
           </div>
         </div>

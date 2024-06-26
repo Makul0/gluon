@@ -77,12 +77,12 @@ export default function SignIn() {
         <form className="max-w-md mx-auto mt-10 p-8 shadow-lg ">
             <div className="mb-6 text-black">
             {/* {user ? `Logged in as ${user.email}` : 'Please log in'} */}
-            <input name="username" type="text" onChange={e => setEmail(e.target.value)} className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-black" placeholder="Enter email " />
+            <input name="username" type="text" onChange={e => setEmail(e.target.value)} className="w-full text-gray-800 text-sm px-4 py-3 " placeholder="Enter email " />
             </div>
             <div className="mb-6 relative">
-                 <input name="password" type="password" onChange={e => setPassword(e.target.value)} className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600" placeholder="Enter your password"  />
+                 <input name="password" type="password" onChange={e => setPassword(e.target.value)} className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 " placeholder="Enter your password"  />
             </div>
-            <Link href="/home"><Button onClick={login} className="w-full text-white text-2xl bg-black p-2 bg-opacity-50">Login</Button></Link>
+            <Link href="/home"><Button onClick={login} className="w-full text-white text-2xl bg-black p-2 ">Login</Button></Link>
         </form>
     );
 }

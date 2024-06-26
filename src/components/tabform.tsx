@@ -6,7 +6,7 @@ import SignUp from "./forms/signup";
 
 export default function TabForm() {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col text-black">
       <Tabs aria-label="Options">
         <Tab key="Sign In" title="Sign In">
           <Card>
