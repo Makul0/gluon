@@ -25,10 +25,7 @@ function Modal() {
 
   return (
     <div className="text-center">
-      <span className="flex-grow text-xl text-black">Sign In!</span>
-     <button onClick={() => setModalOpen(true)} className="ml-4 bg-black text-white p-2">
-        ➔
-      </button>
+      <span onClick={() => setModalOpen(true)} className="flex-grow text-3xl text-black bg-white p-2">Sign In!</span>
 
       {isModalOpen && (
         <div className="modal-backdrop fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 backdrop-blur-sm flex items-center justify-center z-50" onClick={handleBackdropClick}>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Homehero from "@/components/home/hero";
 
-export default function Home() {
+export default function Earn() {
     return (
         <main className="flex flex-col md:flex-row h-screen">
       <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"></link>
@@ -21,7 +21,7 @@ export default function Home() {
   }}></div>
   <div className="relative p-16 h-74 space-y-3">
     <h1 className="text-4xl">
-        Hii,
+        earn
     </h1>
     <h2 className="text-5xl">
         Welcome!

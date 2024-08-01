@@ -7,8 +7,8 @@ const Typing = () => {
 
   useEffect(() => {
     const options = {
-      strings: [ 'new era of scientific research and publishing','accelerating the pace of discovery and innovation'],
-      typeSpeed: 60,
+      strings: [ 'smart scientific publishing on blockchain','new era of discovery and innovation'],
+      typeSpeed: 40,
       backSpeed: 50, 
       loop: true, 
     };

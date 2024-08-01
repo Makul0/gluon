@@ -1,70 +1,51 @@
-"use client"
-import React, {useEffect} from "react";
-import Link from "next/link";
-import EditModal from "@/components/editor/editmodal";
-
+'use client'
+import React from "react";
+import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
+import Proform from "@/components/publish/proform";
+import Manform from "@/components/publish/manform";
 
 export default function Register() {
-  useEffect(() => {
-
-  },);
   return (
-    <div className="flex flex-grow items-center justify-center space-x-8 p-8 w-full">
-          <div className="bg-black text-white p-4 flex flex-col justify-between w-full ">
-          <span className="flex select-none text-2xl">title *</span>
-          <input
-                    type="text"
-                    name="username"
-                    id="username"
-                    autoComplete="username"
-                    className="block mt-2 flex-1 border-0 bg-white text-black text-xl p-2 w-72"
-                    placeholder="experiment with quantum computer"
-                  />
-            <div className="col-span-full">
-              <label htmlFor="about" className="block text-xl font-medium leading-6 text-white mt-4">
-                Abstract *
-              </label>
-              <div className="mt-2">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={2}
-                  className="block w-full border-0 p-2 text-black text-xl"
-                  defaultValue={''}
-                />
-              </div>
-              <p className="mt-2 text-md text-white">Write a few sentences about your work.</p>
-            </div>
-            <div className="mb-3 w-96 mt-4">
-          
-          <input
-            className="relative m-0 block w-full min-w-0 flex-auto rounded border border-white bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
-            type="file"
-           id="formFile"
-          />
-          <label
-            htmlFor="formFile"
-            className="mt-2 inline-block text-white dark:text-neutral-200"
-          >
-          Upload well edited file!
-          </label>
-      </div>
-           
-            <div className="flex justify-end p-2">
-              <Link href="">
-                <button className="bg-white text-black px-4 py-2">
-                  Publish
-                </button>
-              </Link>
-            </div>
-            <div className="flex justify-end p-2">
-              
-                <button className="bg-white text-black px-4 py-2">
-                  <EditModal />
-                </button>
-              
-            </div>
-          </div>
-        </div>
+     <div>
+      <main className="flex flex-col md:flex-row h-screen">
+      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"></link>
+      <div style={{position: "relative", fontFamily: "EB Garamond"}} className="flex flex-col w-full h-full ">
+  <div style={{
+    content: '""',
+    backgroundImage: 'url("https://image.lexica.art/full_webp/bbb9dc5a-5a90-4d0c-a225-b0c36e3959df")',
+    backgroundSize: "cover",
+    filter: "brightness(70%) blur(1px)",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: -1,
+  }}></div>
+  <div className="relative p-8 space-y-3">
+  <div className="flex w-full flex-col ">
+      <Tabs aria-label="Options">
+        <Tab key="Manual" title="Manual">
+          <Card>
+            <CardBody>
+              <Manform />
+            </CardBody>
+          </Card>  
+        </Tab>
+        <Tab key="Professional" title="Professional">
+          <Card>
+            <CardBody>
+              <Proform />
+            </CardBody>
+          </Card>  
+        </Tab>
+      </Tabs>
+    </div>  
+  </div>
+</div>
+
+     
+    </main>
+     </div>
   );
 }

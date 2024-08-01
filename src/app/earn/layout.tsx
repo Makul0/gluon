@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 export const metadata: Metadata = {
     title: "Home",
-    description: "Gluon Publish page",
+    description: "Gluon earn page",
   };
 
 
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 			<body className="">
 			<div className="absolute left h-screen w-20">
             <header className="bg-background rounded-full p-3 inline-flex items-center justify-center flex flex-col gap-y-3">
-            <Link href="/home"><HomeIcon className="flex w-8 h-8 text-primary"/></Link> 
+			 <Link href="/home"><HomeIcon className="flex w-8 h-8 text-primary"/></Link> 
              <Link href="/publish"><PenIcon className="flex w-6 h-6 text-primary " /></Link> 
-			 <Link href="/explore"><CompassIcon className=" flex w-8 h-8 text-primary" /></Link>
+			  <Link href="/explore"><CompassIcon className=" flex w-8 h-8 text-primary" /></Link>
 			 <Link href="earn"> <DollarSignIcon className="flex w-8 h-8 text-primary"/></Link>
 			  <UserIcon className="flex w-8 h-8 text-primary absolute bottom-1 "/>
             </header>
