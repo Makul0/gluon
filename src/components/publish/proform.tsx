@@ -8,7 +8,7 @@ export default function Proform() {
 
   },);
   return (
-    <div className="flex flex-grow items-center justify-center space-x-8 p-8 w-full">
+    <div className="flex flex-grow items-center justify-center space-x-8 p-8 w-1/2">
           <div className="bg-black text-white p-4 flex flex-col justify-between w-full ">
           <span className="flex select-none text-2xl">title *</span>
           <input

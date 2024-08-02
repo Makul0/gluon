@@ -9,7 +9,7 @@ export default function Explore() {
       <div style={{position: "relative", fontFamily: "EB Garamond"}} className="flex flex-col w-full h-full ">
   <div style={{
     content: '""',
-    backgroundImage: 'url("https://raw.githubusercontent.com/Makul0/Assets-store-almera/main/formbg2.jpg")',
+    backgroundImage: 'url("https://image.lexica.art/full_webp/bbb9dc5a-5a90-4d0c-a225-b0c36e3959df")',
     backgroundSize: "cover",
     filter: "brightness(70%) blur(1px)",
     position: "absolute",

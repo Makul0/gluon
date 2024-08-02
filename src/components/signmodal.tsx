@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import TabForm from './tabform'; 
+import TabForm from './userinfo'; 
 
 
 function Modal() {
@@ -25,7 +25,7 @@ function Modal() {
 
   return (
     <div className="text-center">
-      <span onClick={() => setModalOpen(true)} className="flex-grow text-3xl text-black bg-white p-2">Sign In!</span>
+      <span onClick={() => setModalOpen(true)} className="flex-grow text-3xl text-black bg-white p-2">Start!</span>
 
       {isModalOpen && (
         <div className="modal-backdrop fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 backdrop-blur-sm flex items-center justify-center z-50" onClick={handleBackdropClick}>

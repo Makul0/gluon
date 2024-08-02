@@ -12,7 +12,7 @@ export default function Register() {
       <div style={{position: "relative", fontFamily: "EB Garamond"}} className="flex flex-col w-full h-full ">
   <div style={{
     content: '""',
-    backgroundImage: 'url("https://image.lexica.art/full_webp/bbb9dc5a-5a90-4d0c-a225-b0c36e3959df")',
+    backgroundImage: 'url("https://image.lexica.art/full_webp/529f83bf-724d-4637-a883-3e456cb05d5d")',
     backgroundSize: "cover",
     filter: "brightness(70%) blur(1px)",
     position: "absolute",
